@@ -1,0 +1,74 @@
+{
+    "menu":[
+        {
+            "name":"主页",
+            "url":"/wechat/pages/admin/index.html",
+            "menuId":"indexPage",
+            "classStyle":"icon-dashboard",
+            "priv":20,
+            "level":1
+        },
+
+        {
+            "name":"接入微信公众账号",
+            "url":"/wechat/pages/admin/cmpy/wechatAccount.html",
+            "menuId":"wechatAccount",
+            "classStyle":"icon-comments",
+            "priv":2,
+            "level":1
+        },
+         {
+            "name":"发布软文",
+            "url":"/wechat/pages/admin/media/mediaInfo.html",
+            "menuId":"mediaSelect",
+            "classStyle":"icon-gift",
+            "priv":2,
+            "level":1
+        },
+         {
+            "name":"传播者管理",
+            "url":"/wechat/pages/admin/cmpy/wechat/wechatUserInfo.html",
+            "menuId":"wechatUserInfo",
+            "classStyle":"icon-comments",
+            "priv":2,
+            "level":1
+        },
+        
+       
+        
+        {"groupMenu":
+        [
+        {
+            "name":"发布征稿",
+            "url":"/wechat/pages/admin/cmpy/contributionPaper.html",
+            "menuId":"publishPaper",
+            "classStyle":"icon-double-angle-right",
+            "priv":2,
+            "level":2
+        },
+        {
+            "name":"选稿",
+            "url":"/wechat/pages/admin/cmpy/selectPaper.html",
+            "menuId":"selectPaper",
+            "classStyle":"icon-double-angle-right",
+            "priv":2,
+            "level":2
+        }
+        
+        ],
+        "name":"征稿管理",
+        "classStyle":"icon-calendar",
+        "menuId":"contributionPaperGroup"
+        },
+        
+         {
+            "name":"企业用户管理",
+            "url":"/wechat/pages/admin/cmpy/userInfo.html",
+            "menuId":"cmpyUserInfo",
+            "classStyle":"icon-user",
+            "priv":2,
+            "level":1
+        }
+       
+    ]
+}

@@ -1,0 +1,34 @@
+{
+	"menu":[
+		{
+			"name":"主页",
+			"url":"/wechat/pages/admin/index.html",
+			"menuId":"indexPage",
+			"classStyle":"icon-dashboard",
+			"priv":20,
+			"level":1
+		},
+
+		
+		{
+			"name":"企业征稿",
+			"url":"/wechat/pages/admin/editor/contributionPaper.html",
+			"menuId":"reportDetail",
+			"classStyle":"icon-calendar",
+			"priv":1,
+			"level":1
+		},
+		
+		{
+			"name":"我的投稿",
+			"url":"/wechat/pages/admin/editor/manuscript.html",
+			"menuId":"reportSum",
+			"classStyle":"icon-edit",
+			"priv":5,
+			"level":1
+		}
+		
+		
+		
+	]
+}

@@ -1,0 +1,63 @@
+{
+	"freePath":[
+		{
+			"freeUrl":"login.html",
+			"checkMethod":"endsWith"
+		},
+		{
+			"freeUrl":"newmedia",
+			"checkMethod":"endsWith"
+		},
+		{
+			"freeUrl":"coreServlet",
+			"checkMethod":"contains"
+		},
+		{
+			"freeUrl":"newmedia/",
+			"checkMethod":"endsWith"
+		},
+		{
+			"freeUrl":"checkLogin.action",
+			"checkMethod":"endsWith"
+		},
+		{
+			"freeUrl":"checkCmpyName.action",
+			"checkMethod":"contains"
+		},
+		{
+			"freeUrl":"checkUserName.action",
+			"checkMethod":"contains"
+		},
+		{
+			"freeUrl":"getDictInfo.action",
+			"checkMethod":"contains"
+		},
+		{
+			"freeUrl":"logout.action",
+			"checkMethod":"endsWith"
+		},
+		{
+			"freeUrl":"initMenu.action",
+			"checkMethod":"endsWith"
+		},
+		{
+		   "freeUrl":"checkUsername.action",
+		   "checkMethod":"contains"
+		  },
+		{
+			"freeUrl":"addCompanyInfo.action",
+			"checkMethod":"endsWith"
+		},
+		{
+			"freeUrl":"addEditorInfo.action",
+			"checkMethod":"endsWith"
+		},
+		
+		{
+			"freeUrl":"Code.action",
+			"checkMethod":"contains"
+		}
+		
+		
+	]
+}

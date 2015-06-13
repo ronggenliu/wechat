@@ -1,0 +1,79 @@
+﻿{
+    "button": [
+        {
+            "sub_button": [
+                {
+                    "type": "click",
+                    "key": "11",
+                    "name": "天气预报"
+                },
+                {
+                    "type": "click",
+                    "key": "12",
+                    "name": "翻译"
+                },
+                {
+                    "type": "view",
+                    "url": "http://www.digit0902.com/weixin_jason/pages/mybookmark.html",
+                    "name": "我的主页"
+                },
+                {
+                    "type": "click",
+                    "key": "14",
+                    "name": "历史上的今天"
+                }
+            ],
+            "name": "生活助手"
+        },
+        {
+            "sub_button": [
+                {
+                    "type": "click",
+                    "key": "21",
+                    "name": "歌曲点播"
+                },
+                {
+                    "type": "pic_weixin",
+                    "key": "22",
+                    "name": "弹出微信相册"
+                },
+                {
+                    "type": "location_select",
+                    "key": "23",
+                    "name": "弹出位置"
+                },
+                {
+                    "type": "click",
+                    "key": "24",
+                    "name": "人脸识别"
+                },
+                {
+                    "type": "scancode_push",
+                    "key": "25",
+                    "name": "扫描"
+                }
+            ],
+            "name": "休闲驿站"
+        },
+        {
+            "sub_button": [
+                {
+                    "type": "scancode_waitmsg",
+                    "key": "31",
+                    "name": "弹出扫描"
+                },
+                {
+                    "type": "pic_sysphoto",
+                    "key": "32",
+                    "name": "拍照发图"
+                },
+                {
+                    "type": "pic_photo_or_album",
+                    "key": "33",
+                    "name": "弹出发图"
+                }
+            ],
+            "name": "更多体验"
+        }
+    ]
+}

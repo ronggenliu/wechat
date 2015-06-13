@@ -1,0 +1,110 @@
+{
+	"menu":[
+		{
+			"name":"控制台-首页",
+			"url":"/wechat/pages/admin/index.html",
+			"menuId":"indexPage",
+			"classStyle":"icon-dashboard",
+			"priv":20,
+			"level":1
+		},
+
+		
+		{"groupMenu":
+		[{
+			"name":"周报详细管理",
+			"url":"/wechat/pages/admin/weeklyReportsDetail.html",
+			"menuId":"reportDetail",
+			"classStyle":"icon-double-angle-right",
+			"priv":1,
+			"level":2
+		},
+		
+		{
+			"name":"周报总结管理",
+			"url":"/wechat/pages/admin/weeklyReports.html",
+			"menuId":"reportSum",
+			"classStyle":"icon-double-angle-right",
+			"priv":5,
+			"level":2
+		}
+		
+		],
+		"name":"周报管理",
+		"classStyle":"icon-calendar",
+		"menuId":"weekReport"
+		},
+		
+		{"groupMenu":
+		[{
+			"name":"系统用户管理",
+			"url":"/wechat/pages/admin/sys/userInfo.html",
+			"menuId":"sysUserPage",
+			"classStyle":"icon-double-angle-right",
+			"priv":1,
+			"level":2
+		},
+		{
+            "name":"企业信息管理",
+            "url":"/wechat/pages/admin/sys/companyInfo.html",
+            "menuId":"cmpyInfoPage",
+            "classStyle":"icon-double-angle-right",
+            "priv":5,
+            "level":2
+        },
+		{
+			"name":"编辑者管理",
+			"url":"/wechat/pages/admin/sys/editorInfo.html",
+			"menuId":"editorInfoPage",
+			"classStyle":"icon-double-angle-right",
+			"priv":2,
+			"level":2
+		},
+		{
+			"name":"字典类型",
+			"url":"/wechat/pages/admin/sys/dictType.html",
+			"menuId":"dictTypePage",
+			"classStyle":"icon-double-angle-right",
+			"priv":2,
+			"level":2
+		},
+		{
+			"name":"字典数据信息",
+			"url":"/wechat/pages/admin/sys/dict.html",
+			"menuId":"dictInfoPage",
+			"classStyle":"icon-double-angle-right",
+			"priv":2,
+			"level":2
+		},
+		
+		
+		{
+			"name":"部门管理",
+			"url":"/wechat/pages/admin/deptInfo.html",
+			"menuId":"sysPageOpPage",
+			"classStyle":"icon-double-angle-right",
+			"priv":2,
+			"level":2
+		}
+		
+		
+		
+		
+		
+		],
+		"name":"系统管理",
+		"classStyle":"icon-desktop",
+		"menuId":"systemResGroup"
+		},
+
+		{
+			"name":"帮助",
+			"url":"/wechat/faq.html",
+			"classStyle":"icon-book",
+			"menuId":"faqPage",
+			"priv":100,
+			"level":1
+		}
+		
+	]
+}

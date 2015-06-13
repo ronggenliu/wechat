@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.wechat.sys.mapper.UserInfoMapper">
+	<resultMap id="tbUserInfoResultMap" type="org.wechat.sys.model.UserInfo">
+		<id column="user_id" property="userId" />
+		<result column="user_name" property="userName" />
+		<result column="password" property="password" />
+		<result column="role_type" property="roleType" />
+		<result column="del_flag" property="delFlag" />
+		<result column="version" property="version" />
+		<result column="op_id" property="opId" />
+		<result column="create_time" property="createTime" />
+		<result column="update_time" property="updateTime" />
+		<result column="role_id" property="roleId" />
+		<result column="wechat_id" property="wechatId" />
+		<result column="extra2" property="extra2" />
+		<result column="extra3" property="extra3" />
+		<result column="extra4" property="extra4" />
+		<result column="extra5" property="extra5" />
+	</resultMap>
+
+	<select id="selectByPK" parameterType="java.lang.Object" resultMap="tbUserInfoResultMap">
+		select * from tb_user_info where 1=1 and user_id = #{id} and del_flag = 0 
+	</select>
+
+
+	<select id="selectAll" resultMap="tbUserInfoResultMap">
+		select * from tb_user_info where 1=1 and del_flag = 0 
+	</select>
+
+
+	<select id="selectByListKeys" resultMap="tbUserInfoResultMap">
+		select * from tb_user_info where 1=1 and del_flag = 0  and user_id in
+		<foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</select>
+
+	<select id="selectByCondition" resultMap="tbUserInfoResultMap">
+		select * from tb_user_info where 1=1  and del_flag = 0 
+		<if test="userId != null">
+			and user_id = #{userId}
+		</if>
+		<if test="userName != null">
+			and user_name = #{userName}
+		</if>
+		<if test="password != null">
+			and password = #{password}
+		</if>
+		<if test="roleType != null">
+			and role_type = #{roleType}
+		</if>
+		<if test="delFlag != null">
+			and del_flag = #{delFlag}
+		</if>
+		<if test="version != null">
+			and version = #{version}
+		</if>
+		<if test="opId != null">
+			and op_id = #{opId}
+		</if>
+		<if test="createTime != null">
+			and create_time = #{createTime}
+		</if>
+		<if test="updateTime != null">
+			and update_time = #{updateTime}
+		</if>
+		<if test="roleId != null">
+			and role_id = #{roleId}
+		</if>
+		<if test="wechatId != null">
+			and wechat_id = #{wechatId}
+		</if>
+		<if test="extra2 != null">
+			and extra2 = #{extra2}
+		</if>
+		<if test="extra3 != null">
+			and extra3 = #{extra3}
+		</if>
+		<if test="extra4 != null">
+			and extra4 = #{extra4}
+		</if>
+		<if test="extra5 != null">
+			and extra5 = #{extra5}
+		</if>
+
+		<if test="start !=null">
+			limit #{start},#{rows}
+		</if>
+	</select>
+
+	<select id="count" resultType="java.lang.Integer">
+		select count(*) total from tb_user_info where 1=1  and del_flag = 0 
+		<if test="userId != null">
+			and user_id = #{userId}
+		</if>
+		<if test="userName != null">
+			and user_name = #{userName}
+		</if>
+		<if test="password != null">
+			and password = #{password}
+		</if>
+		<if test="roleType != null">
+			and role_type = #{roleType}
+		</if>
+		<if test="delFlag != null">
+			and del_flag = #{delFlag}
+		</if>
+		<if test="version != null">
+			and version = #{version}
+		</if>
+		<if test="opId != null">
+			and op_id = #{opId}
+		</if>
+		<if test="createTime != null">
+			and create_time = #{createTime}
+		</if>
+		<if test="updateTime != null">
+			and update_time = #{updateTime}
+		</if>
+		<if test="roleId != null">
+			and role_id = #{roleId}
+		</if>
+		<if test="wechatId != null">
+			and wechat_id = #{wechatId}
+		</if>
+		<if test="extra2 != null">
+			and extra2 = #{extra2}
+		</if>
+		<if test="extra3 != null">
+			and extra3 = #{extra3}
+		</if>
+		<if test="extra4 != null">
+			and extra4 = #{extra4}
+		</if>
+		<if test="extra5 != null">
+			and extra5 = #{extra5}
+		</if>
+	</select>
+
+	<insert id="insertSelective" parameterType="org.wechat.sys.model.UserInfo" useGeneratedKeys="true" keyProperty="userId">
+		insert into tb_user_info 
+		<trim prefix="(" suffix=")" suffixOverrides="," >
+			<if test="userId != null" >
+				user_id,
+			</if>
+			<if test="userName != null" >
+				user_name,
+			</if>
+			<if test="password != null" >
+				password,
+			</if>
+			<if test="roleType != null" >
+				role_type,
+			</if>
+			<if test="delFlag != null" >
+				del_flag,
+			</if>
+			<if test="version != null" >
+				version,
+			</if>
+			<if test="opId != null" >
+				op_id,
+			</if>
+			<if test="createTime != null" >
+				create_time,
+			</if>
+			<if test="updateTime != null" >
+				update_time,
+			</if>
+			<if test="roleId != null" >
+				role_id,
+			</if>
+			<if test="wechatId != null" >
+				wechat_id,
+			</if>
+			<if test="extra2 != null" >
+				extra2,
+			</if>
+			<if test="extra3 != null" >
+				extra3,
+			</if>
+			<if test="extra4 != null" >
+				extra4,
+			</if>
+			<if test="extra5 != null" >
+				extra5,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides="," >
+			<if test="userId != null" >
+				#{userId},
+			</if>
+			<if test="userName != null" >
+				#{userName},
+			</if>
+			<if test="password != null" >
+				#{password},
+			</if>
+			<if test="roleType != null" >
+				#{roleType},
+			</if>
+			<if test="delFlag != null" >
+				#{delFlag},
+			</if>
+			<if test="version != null" >
+				#{version},
+			</if>
+			<if test="opId != null" >
+				#{opId},
+			</if>
+			<if test="createTime != null" >
+				#{createTime},
+			</if>
+			<if test="updateTime != null" >
+				#{updateTime},
+			</if>
+			<if test="roleId != null" >
+				#{roleId},
+			</if>
+			<if test="wechatId != null" >
+				#{wechatId},
+			</if>
+			<if test="extra2 != null" >
+				#{extra2},
+			</if>
+			<if test="extra3 != null" >
+				#{extra3},
+			</if>
+			<if test="extra4 != null" >
+				#{extra4},
+			</if>
+			<if test="extra5 != null" >
+				#{extra5},
+			</if>
+
+		</trim>
+	</insert>
+
+	<insert id="insertBylist">
+		insert into tb_user_info(user_id, user_name, password, role_type, del_flag, version, op_id, create_time, update_time, role_id, wechat_id, extra2, extra3, extra4, extra5) values
+		<foreach collection="list" index="index" item="item" separator=",">
+			( #{item.userId}, #{item.userName}, #{item.password}, #{item.roleType}, #{item.delFlag}, #{item.version}, #{item.opId}, #{item.createTime}, #{item.updateTime}, #{item.roleId}, #{item.wechatId}, #{item.extra2}, #{item.extra3}, #{item.extra4}, #{item.extra5} )
+		</foreach>
+	</insert>
+
+	<update id="updateByPKSelective" parameterType="org.wechat.sys.model.UserInfo">
+		update tb_user_info 
+		<set>
+		<if test="userName != null">
+			user_name = #{userName},
+		</if>
+		<if test="password != null">
+			password = #{password},
+		</if>
+		<if test="roleType != null">
+			role_type = #{roleType},
+		</if>
+		<if test="delFlag != null">
+			del_flag = #{delFlag},
+		</if>
+		<if test="version != null">
+			version = #{version},
+		</if>
+		<if test="opId != null">
+			op_id = #{opId},
+		</if>
+		<if test="createTime != null">
+			create_time = #{createTime},
+		</if>
+		<if test="updateTime != null">
+			update_time = #{updateTime},
+		</if>
+		<if test="roleId != null">
+			role_id = #{roleId},
+		</if>
+		<if test="wechatId != null">
+			wechat_id = #{wechatId},
+		</if>
+		<if test="extra2 != null">
+			extra2 = #{extra2},
+		</if>
+		<if test="extra3 != null">
+			extra3 = #{extra3},
+		</if>
+		<if test="extra4 != null">
+			extra4 = #{extra4},
+		</if>
+		<if test="extra5 != null">
+			extra5 = #{extra5},
+		</if>
+
+		</set>
+		where 1=1 and user_id = #{userId} and version=#{oldVersion}
+	</update>
+
+	<update id="updateByList">
+		<foreach collection="list" index="index" item="item" separator=";">
+		update tb_user_info
+		<set>
+		<if test="item.userName != null">
+			 user_name = #{item.userName},
+		</if>
+		<if test="item.password != null">
+			 password = #{item.password},
+		</if>
+		<if test="item.roleType != null">
+			 role_type = #{item.roleType},
+		</if>
+		<if test="item.delFlag != null">
+			 del_flag = #{item.delFlag},
+		</if>
+		<if test="item.version != null">
+			 version = #{item.version},
+		</if>
+		<if test="item.opId != null">
+			 op_id = #{item.opId},
+		</if>
+		<if test="item.createTime != null">
+			 create_time = #{item.createTime},
+		</if>
+		<if test="item.updateTime != null">
+			 update_time = #{item.updateTime},
+		</if>
+		<if test="item.roleId != null">
+			 role_id = #{item.roleId},
+		</if>
+		<if test="item.wechatId != null">
+			 wechat_id = #{item.wechatId},
+		</if>
+		<if test="item.extra2 != null">
+			 extra2 = #{item.extra2},
+		</if>
+		<if test="item.extra3 != null">
+			 extra3 = #{item.extra3},
+		</if>
+		<if test="item.extra4 != null">
+			 extra4 = #{item.extra4},
+		</if>
+		<if test="item.extra5 != null">
+			 extra5 = #{item.extra5},
+		</if>
+		</set>
+		 where 1=1 and user_id=#{item.userId} and version=#{item.oldVersion}
+		</foreach>
+	</update>
+
+	<delete id="deleteByPK" parameterType="java.lang.Object">
+		delete from tb_user_info where 1=1 and user_id = #{id}
+	</delete>
+
+	<delete id="deleteByListKeys">
+		delete  from tb_user_info where 1=1 and user_id in
+		<foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+	</delete>
+
+	<update id="deleteByLogicList">
+		update tb_user_info	set del_flag=1	 where 1=1 and user_id in
+		<foreach collection="list" index="index" item="item" open="(" separator="," close=")">
+			#{item}
+		</foreach>
+
+	</update>
+
+	<update id="deleteByLogicId">
+		update tb_user_info	set del_flag=1, update_time=#{updateTime}, version=#{version}, op_id=#{opId} 
+		 where 1=1 and user_id = #{id} and  version=#{oldVersion}
+	</update>
+
+	<update id="rebackByLogicId">
+		update tb_user_info	set del_flag=0, update_time=#{updateTime}, version=#{version}, op_id=#{opId} 
+		 where 1=1 and user_id = #{id} and  version=#{oldVersion}
+	</update>
+
+</mapper>

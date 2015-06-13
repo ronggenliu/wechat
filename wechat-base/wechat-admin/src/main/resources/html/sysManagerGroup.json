@@ -1,0 +1,105 @@
+{
+	"menu":[
+		{
+			"name":"主页",
+			"url":"/wechat/pages/admin/index.html",
+			"menuId":"indexPage",
+			"classStyle":"icon-dashboard",
+			"priv":20,
+			"level":1
+		},
+
+		{"groupMenu":
+        [
+        {
+            "name":"企业征稿管理",
+            "url":"/wechat/pages/admin/sys/busi/contributionPaper.html",
+            "menuId":"rolePrivGroupPage",
+            "classStyle":"icon-double-angle-right",
+            "priv":2,
+            "level":2
+        },
+        {
+            "name":"软文管理",
+            "url":"/wechat/pages/admin/sys/busi/mediaInfo.html",
+            "menuId":"mediaSelect",
+            "classStyle":"icon-double-angle-right",
+            "priv":2,
+            "level":2
+        },
+        
+        {
+            "name":"系统用户管理",
+            "url":"/wechat/pages/admin/sys/userInfo.html",
+            "menuId":"sysUserPage",
+            "classStyle":"icon-double-angle-right",
+            "priv":1,
+            "level":2
+        },
+        {
+            "name":"企业信息管理",
+            "url":"/wechat/pages/admin/sys/companyInfo.html",
+            "menuId":"cmpyInfoPage",
+            "classStyle":"icon-double-angle-right",
+            "priv":5,
+            "level":2
+        },
+        {
+            "name":"编辑者管理",
+            "url":"/wechat/pages/admin/sys/editorInfo.html",
+            "menuId":"editorInfoPage",
+            "classStyle":"icon-double-angle-right",
+            "priv":2,
+            "level":2
+        }
+        
+        
+        ],
+        "name":"平台运营中心",
+        "classStyle":"icon-calendar",
+        "menuId":"companyInfoPages"
+        },
+		
+		
+		{"groupMenu":
+		[
+		
+		
+		
+		{
+			"name":"字典类型",
+			"url":"/wechat/pages/admin/sys/dictType.html",
+			"menuId":"dictTypePage",
+			"classStyle":"icon-double-angle-right",
+			"priv":2,
+			"level":2
+		},
+		{
+			"name":"字典数据信息",
+			"url":"/wechat/pages/admin/sys/dict.html",
+			"menuId":"dictInfoPage",
+			"classStyle":"icon-double-angle-right",
+			"priv":2,
+			"level":2
+		},
+		
+		
+		{
+			"name":"系统权限组管理",
+			"url":"/wechat/pages/admin/sys/rolePrivGroup.html",
+			"menuId":"rolePrivGroupPage",
+			"classStyle":"icon-double-angle-right",
+			"priv":2,
+			"level":2
+		}
+		
+		
+		
+		],
+		"name":"系统管理",
+		"classStyle":"icon-desktop",
+		"menuId":"systemResGroup"
+		}
+		
+	]
+}
